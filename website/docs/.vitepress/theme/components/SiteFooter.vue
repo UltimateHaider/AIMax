@@ -1,5 +1,5 @@
 <template>
-  <footer class="site-footer">
+  <footer class="site-footer" :class="{ 'site-footer--sidebar': withSidebar }">
     <div class="footer-inner">
       <div class="footer-brand">
         <a class="footer-logo" href="/">
@@ -42,11 +42,22 @@
   </footer>
 </template>
 
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    withSidebar?: boolean
+  }>(),
+  {
+    withSidebar: false
+  }
+)
+</script>
+
 <style scoped>
 .site-footer {
   padding: 2.5rem 1.5rem 1.4rem;
   color: var(--vp-c-text-2);
-  background: var(--vp-c-bg-alt);
+  background: var(--bg);
   border-block-start: 4px solid transparent;
   border-image: linear-gradient(
       90deg,
@@ -140,14 +151,18 @@
   gap: 0.5rem 1.5rem;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1.1rem;
+  min-width: 0;
+  /* Keep the copyright clear of the fixed back-to-top button (left edge). */
+  padding: 1.1rem 0 0 4.5rem;
   font-size: 0.75rem;
   color: var(--vp-c-text-2);
   border-block-start: 1px solid var(--vp-c-divider);
 }
 
 .footer-bottom p {
+  min-width: 0;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .footer-bottom a {

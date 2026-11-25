@@ -211,11 +211,6 @@ html[dir='rtl'] {
     padding-left: 0 !important;
   }
 
-  html[dir='rtl'] .VPDoc.has-aside .content-container {
-    padding-left: var(--vp-sidebar-width) !important;
-    padding-right: 0 !important;
-  }
-
   html[dir='rtl'] .VPDocAside {
     left: 0 !important;
     right: auto !important;
@@ -224,6 +219,144 @@ html[dir='rtl'] {
   html[dir='rtl'] .VPLocalNav.has-sidebar {
     padding-right: var(--vp-sidebar-width) !important;
     padding-left: 0 !important;
+  }
+}
+
+/* Lesson pages: use the full space between the right sidebar and the left
+   TOC. The old RTL padding here duplicated the sidebar width and squeezed
+   the article into a 350-420px column with a large empty gap. */
+@media (min-width: 960px) {
+  .VPDoc.has-sidebar .container {
+    max-width: none;
+    justify-content: flex-start;
+  }
+
+  .VPDoc.has-sidebar .content {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .VPDoc.has-aside .content-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  }
+
+  .VPDoc.has-aside .aside {
+    flex: 0 0 256px;
+    max-width: 256px;
+  }
+
+  /* Keep prose at a comfortable measure while code and tables may use
+     the full width of the lesson column. */
+  .VPDoc .vp-doc > div > p,
+  .VPDoc .vp-doc > div > ul,
+  .VPDoc .vp-doc > div > ol,
+  .VPDoc .vp-doc > div > blockquote,
+  .VPDoc .vp-doc > div > h1,
+  .VPDoc .vp-doc > div > h2,
+  .VPDoc .vp-doc > div > h3,
+  .VPDoc .vp-doc > div > h4,
+  .VPDoc .vp-doc > div > h5,
+  .VPDoc .vp-doc > div > h6 {
+    max-width: 800px;
+  }
+}
+
+/* Desktop sidebar collapse. The mobile drawer keeps its own ☰ toggle. */
+.sidebar-collapse-toggle {
+  position: fixed;
+  top: calc(var(--vp-nav-height) + 16px);
+  z-index: 55;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  color: var(--lagune-text);
+  cursor: pointer;
+  background: var(--bg);
+  border: 2px solid var(--vp-c-divider);
+  border-radius: 12px;
+  box-shadow: var(--neo-shadow-sm);
+  transition: var(--theme-transition), transform 0.2s ease;
+}
+
+.sidebar-collapse-toggle:hover {
+  color: var(--nectarine-text);
+  border-color: var(--peche);
+}
+
+.sidebar-collapse-toggle:focus-visible {
+  outline: 3px solid var(--focus-ring, var(--peche-text));
+  outline-offset: 3px;
+}
+
+@media (min-width: 960px) {
+  .sidebar-collapse-toggle {
+    display: inline-flex;
+  }
+
+  html[dir='rtl'] .sidebar-collapse-toggle {
+    right: calc(var(--vp-sidebar-width) - 18px);
+  }
+
+  html[dir='ltr'] .sidebar-collapse-toggle {
+    left: calc(var(--vp-sidebar-width) - 18px);
+  }
+
+  .VPSidebar {
+    transition: transform 0.25s ease;
+  }
+
+  html[dir='rtl'] .Layout.is-sidebar-collapsed .VPSidebar {
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: transform 0.25s ease, visibility 0s linear 0.25s;
+  }
+
+  html[dir='ltr'] .Layout.is-sidebar-collapsed .VPSidebar {
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-100%);
+    transition: transform 0.25s ease, visibility 0s linear 0.25s;
+  }
+
+  html[dir='rtl'] .Layout.is-sidebar-collapsed .VPContent.has-sidebar {
+    padding-right: 0 !important;
+  }
+
+  html[dir='ltr'] .Layout.is-sidebar-collapsed .VPContent.has-sidebar {
+    padding-left: 0 !important;
+  }
+
+  html[dir='rtl'] .Layout.is-sidebar-collapsed .sidebar-collapse-toggle {
+    right: 16px;
+  }
+
+  html[dir='ltr'] .Layout.is-sidebar-collapsed .sidebar-collapse-toggle {
+    left: 16px;
+  }
+}
+
+/* TOC: use sticky inside its own column so it stops at the end of the
+   article instead of floating over the footer at the bottom of the page. */
+@media (min-width: 1280px) {
+  .VPDoc .aside-container {
+    position: sticky !important;
+    top: calc(var(--vp-nav-height) + 48px) !important;
+    height: auto !important;
+    max-height: calc(100vh - var(--vp-nav-height) - 72px) !important;
+    padding-top: 0 !important;
+    overflow-y: auto;
+  }
+
+  .VPDoc .aside-curtain {
+    display: none !important;
   }
 }
 
@@ -436,6 +569,18 @@ pre {
 .VPFooter .message,
 .VPFooter .copyright {
   color: var(--vp-c-text-2);
+}
+
+/* Keep the full-width footer background, but reserve the fixed sidebar area
+   so its links and copyright never sit underneath the sidebar (RTL). */
+@media (min-width: 960px) {
+  html[dir='rtl'] .site-footer--sidebar {
+    padding-right: calc(var(--vp-sidebar-width) + 1.5rem);
+  }
+
+  html[dir='ltr'] .site-footer--sidebar {
+    padding-left: calc(var(--vp-sidebar-width) + 1.5rem);
+  }
 }
 
 /* VitePress local search */

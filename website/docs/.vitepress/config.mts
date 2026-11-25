@@ -10,6 +10,7 @@ const SITE_NAME = 'هندسة الذكاء الاصطناعي من الصفر';
 const DEFAULT_DESCRIPTION =
   'المسار التعليمي التطبيقي الشامل من الصفر إلى الاحتراف في هندسة الذكاء الاصطناعي (435 درساً عبر 20 مرحلة).';
 const OG_IMAGE = `${SITE_URL}/og-image.png`;
+const PRIVATE_PATHS = new Set(['/login', '/signup', '/dashboard']);
 const isLessonPath = (path: string): boolean => /^\/phases\/\d{2}\/[^/]+$/.test(path);
 
 function canonicalPath(relativePath: string): string {
@@ -137,6 +138,8 @@ export default defineConfig({
   buildConcurrency: 4,
 
   vite: {
+    // .env lives in website/, one level above the VitePress docs root.
+    envDir: '..',
     build: {
       reportCompressedSize: false,
     },
@@ -226,6 +229,7 @@ export default defineConfig({
     const pageTitle = pageData.title || SITE_NAME;
     const safeDescription = escapeMeta(description);
     const safeTitle = escapeMeta(pageTitle);
+    const isPrivate = PRIVATE_PATHS.has(pagePath);
     const type = isLessonPath(pagePath) ? 'article' : 'website';
 
     const tags: [string, Record<string, string>][] = [
@@ -237,7 +241,9 @@ export default defineConfig({
         'meta',
         {
           name: 'robots',
-          content: 'index, follow, max-image-preview:large, max-snippet:-1'
+          content: isPrivate
+            ? 'noindex, nofollow'
+            : 'index, follow, max-image-preview:large, max-snippet:-1'
         }
       ],
       ['meta', { property: 'og:site_name', content: SITE_NAME }],

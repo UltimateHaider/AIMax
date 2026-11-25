@@ -71,6 +71,8 @@
       </div>
 
       <div class="site-nav__actions">
+        <LoginButton />
+
         <button
           type="button"
           class="nav-search"
@@ -163,6 +165,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import { ChevronDown, Github, Menu, Moon, Search, Sun, X } from 'lucide-vue-next'
 import summaryData from '../curriculum-summary.json'
+import LoginButton from './LoginButton.vue'
 
 const { isDark } = useData()
 const route = useRoute()
