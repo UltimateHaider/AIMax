@@ -23,6 +23,7 @@ website/.env.local
 # Temporary files
 temp_lessons.json
 all_raw_lessons.json
+phases_summary.txt
 *.log
 
 # OS files
