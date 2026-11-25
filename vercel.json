@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd website && npm install && npm run docs:build",
-  "outputDirectory": "website/docs/.vitepress/dist",
+  "buildCommand": "npm install && npm run docs:build",
+  "outputDirectory": "docs/.vitepress/dist",
   "installCommand": "echo skip"
 }
