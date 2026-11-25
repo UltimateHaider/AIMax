@@ -18,7 +18,8 @@
 cd website
 npm install
 npm run docs:dev      # تشغيل محلي
-npm run docs:build    # بناء الموقع الثابت + sitemap
+npm run docs:build    # بناء الموقع الثابت (بدون Python)
+npm run docs:generate # تحديث صفحات المراحل وsitemap محليًا عند تغيير المحتوى
 npm run docs:preview  # معاينة الناتج
 ```
 

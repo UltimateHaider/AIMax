@@ -37,7 +37,7 @@ ai-engineering-from-scratch/
 ## المتطلبات
 
 - Node.js 20 أو أحدث.
-- Python 3.10 أو أحدث (لمزامنة المحتوى وتوليد SEO).
+- Python 3.10 أو أحدث **اختياري**: مطلوب فقط عند تحديث المحتوى وتشغيل `docs:generate` محليًا. البناء والنشر لا يحتاجان Python.
 
 ## التشغيل محليًا
 
@@ -49,7 +49,7 @@ npm install
 npm run docs:dev
 ```
 
-يفتح VitePress الخادم على `http://localhost:5173` افتراضيًا. يقوم `docs:dev` تلقائيًا بتوليد صفحات المراحل وsitemap قبل التشغيل.
+يفتح VitePress الخادم على `http://localhost:5173` افتراضيًا. صفحات المراحل وsitemap موجودة مسبقًا في المستودع، لذا لا يحتاج التشغيل اليومي إلى Python.
 
 ## البناء
 
@@ -58,11 +58,21 @@ cd website
 npm run docs:build
 ```
 
-الناتج في `website/docs/.vitepress/dist`. الأمر يشغّل أيضًا:
+الناتج في `website/docs/.vitepress/dist`. الأمر يشغّل `vitepress build docs` فقط، ولا يستدعي Python. هذا هو المسار الذي يستخدمه Vercel.
+
+إذا عدّلت `curriculum.json` أو أضفت/حذفت دروسًا، حدّث الملفات المولّدة محليًا ثم التزم بها:
+
+```bash
+cd website
+npm run docs:generate
+npm run docs:build
+git add docs/phases docs/public/sitemap.xml docs/public/robots.txt
+```
+
+`docs:generate` يشغّل:
 
 1. `scripts/generate_phase_pages.py` — يولّد 20 صفحة مرحلة.
 2. `scripts/generate_sitemap.py --strict` — يولّد `sitemap.xml` و`robots.txt` ويفشل إذا كانت صفحة مطلوبة مفقودة.
-3. `vitepress build docs` — يبني الموقع الثابت.
 
 لمعاينة الناتج:
 
