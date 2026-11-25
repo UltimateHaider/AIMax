@@ -1,3 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+website/docs/.vitepress/dist/
+website/docs/.vitepress/cache/
+website/.vitepress/cache/
+dist/
+build/
+.next/
+out/
+.vercel
+
+# Environment variables (هام جداً - لا ترفع كلمات المرور)
+.env
+.env.local
+website/.env
+website/.env.local
+.env.*.local
+*.pem
+*.key
+
+# Temporary files
+temp_lessons.json
+all_raw_lessons.json
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
@@ -7,40 +39,27 @@ env/
 venv/
 .venv/
 *.egg-info/
-dist/
-build/
 .eggs/
 
+# Notebooks
 .ipynb_checkpoints/
 *.ipynb_metadata/
 
-node_modules/
-.next/
-out/
-.vercel
-
+# Rust / compiled artifacts
 target/
 Cargo.lock
 *.rlib
-
 *.deps
 *.ji
 
-.env
-.env.local
-.env.*.local
-*.pem
-*.key
-
-.DS_Store
-Thumbs.db
+# Editors
+.idea/
+.vscode/
 *.swp
 *.swo
 *~
-.idea/
-.vscode/
-*.log
 
+# Local data and model artifacts
 data/
 models/
 checkpoints/
@@ -52,7 +71,8 @@ mlruns/
 *.safetensors
 *.bin
 *.h5
-.gstack/
 
+# Local tooling
+.gstack/
 .link-cache.json
 .claude/

@@ -1,0 +1,190 @@
+{
+  "stats": {
+    "totalPhases": 20,
+    "totalLessons": 435,
+    "totalQuizzes": 240,
+    "totalCode": 433
+  },
+  "phases": [
+    {
+      "id": "00",
+      "name": "Setup & Tooling",
+      "nameAr": "الإعداد وبيئة العمل",
+      "descriptionAr": "تجهيز بيئة التطوير وأدوات العمل البرمجية الشاملة لكافة مراحل مسار الذكاء الاصطناعي.",
+      "lessonCount": 12,
+      "firstLessonSlug": "01-dev-environment",
+      "firstLessonTitleAr": "بيئة التطوير وإعداد الأدوات البرمجية"
+    },
+    {
+      "id": "01",
+      "name": "Math Foundations",
+      "nameAr": "أساسيات الرياضيات",
+      "descriptionAr": "الحدس الرياضي الكامن خلف خوارزميات الذكاء الاصطناعي عبر البرمجة والتطبيق العملي وليس النظريات المجردة.",
+      "lessonCount": 22,
+      "firstLessonSlug": "01-linear-algebra-intuition",
+      "firstLessonTitleAr": "حدس الجبر الخطي والمفاهيم الأساسية"
+    },
+    {
+      "id": "02",
+      "name": "ML Fundamentals",
+      "nameAr": "أساسيات تعلم الآلة",
+      "descriptionAr": "خوارزميات تعلم الآلة الكلاسيكية التي تشكل العمود الفقري لمعظم تطبيقات الذكاء الاصطناعي في بيئات العمل الإنتاجية.",
+      "lessonCount": 18,
+      "firstLessonSlug": "01-what-is-machine-learning",
+      "firstLessonTitleAr": "ما هو تعلم الآلة — الأنواع والتصنيفات"
+    },
+    {
+      "id": "03",
+      "name": "Deep Learning Core",
+      "nameAr": "جوهر التعلم العميق",
+      "descriptionAr": "الشبكات العصبية الاصطناعية من المبادئ الأولى، وبناء إطار تعلم عميق متكامل باليد قبل استخدام المكتبات الجاهزة.",
+      "lessonCount": 13,
+      "firstLessonSlug": "01-the-perceptron",
+      "firstLessonTitleAr": "البيرسيبترون (The Perceptron) — الشرارة الأولى"
+    },
+    {
+      "id": "04",
+      "name": "Computer Vision",
+      "nameAr": "الرؤية الحاسوبية",
+      "descriptionAr": "معالجة وتحليل وفهم الصور والفيديوهات والبيئات ثلاثية الأبعاد باستخدام أحدث نماذج الرؤية الحاسوبية.",
+      "lessonCount": 28,
+      "firstLessonSlug": "01-image-fundamentals",
+      "firstLessonTitleAr": "أساسيات الصور الرقمية — البكسلات، القنوات، وفضاءات الألوان"
+    },
+    {
+      "id": "05",
+      "name": "NLP Foundations to Advanced",
+      "nameAr": "معالجة اللغات الطبيعية (NLP)",
+      "descriptionAr": "معالجة وتحليل اللغات البشرية من الأساسيات حتى التقنيات المتقدمة ونماذج الترجمة والاسترجاع.",
+      "lessonCount": 29,
+      "firstLessonSlug": "01-text-processing",
+      "firstLessonTitleAr": "معالجة النصوص — التقطيع (Tokenization) والجذع والتجذير"
+    },
+    {
+      "id": "06",
+      "name": "Speech & Audio",
+      "nameAr": "الصوت والكلام",
+      "descriptionAr": "التعرف الآلي على الكلام، وتحويل النص إلى صوت، ومعالجة الإشارات الصوتية والنماذج الصوتية التوليدية.",
+      "lessonCount": 17,
+      "firstLessonSlug": "01-audio-fundamentals",
+      "firstLessonTitleAr": "أساسيات الصوت الرقمي — الموجات، التردد، وتحويل فورييه"
+    },
+    {
+      "id": "07",
+      "name": "Transformers Deep Dive",
+      "nameAr": "الغوص العميق في المحولات (Transformers)",
+      "descriptionAr": "دراسة معمارية المحولات (Transformers) بالتفصيل خطوة بخطوة، وآليات الانتباه الذاتي التي أحدثت ثورة الذكاء الاصطناعي.",
+      "lessonCount": 16,
+      "firstLessonSlug": "01-why-transformers",
+      "firstLessonTitleAr": "لماذا المحولات (Transformers)؟ أوجه قصور الشبكات المتكررة"
+    },
+    {
+      "id": "08",
+      "name": "Generative AI",
+      "nameAr": "الذكاء الاصطناعي التوليدي",
+      "descriptionAr": "نماذج الانتشار، والشبكات التوليدية التنافسية، ومولدات الصور والفيديو والنماذج متعددة الوسائط.",
+      "lessonCount": 15,
+      "firstLessonSlug": "01-generative-models-taxonomy-history",
+      "firstLessonTitleAr": "النماذج التوليدية — التاريخ، التصنيفات، والمبادئ الأساسية"
+    },
+    {
+      "id": "09",
+      "name": "Reinforcement Learning",
+      "nameAr": "التعلم المعزز",
+      "descriptionAr": "تدريب الوكلاء على اتخاذ القرارات من خلال التفاعل مع البيئة، والأساس العملي للتعلم المعزز بالتغذية الراجعة البشرية (RLHF).",
+      "lessonCount": 12,
+      "firstLessonSlug": "01-mdps-states-actions-rewards",
+      "firstLessonTitleAr": "عمليات ماركوف لاتخاذ القرار (MDPs) — الحالات، الأفعال، والمكافآت"
+    },
+    {
+      "id": "10",
+      "name": "LLMs from Scratch",
+      "nameAr": "بناء النماذج اللغوية من الصفر",
+      "descriptionAr": "تصميم، وتدريب، وتقييم النماذج اللغوية الكبيرة (LLMs) من الصفر معماريًا وبرمجيًا.",
+      "lessonCount": 24,
+      "firstLessonSlug": "01-tokenizers",
+      "firstLessonTitleAr": "خوارزميات التقطيع النصي: BPE و WordPiece و SentencePiece"
+    },
+    {
+      "id": "11",
+      "name": "LLM Engineering",
+      "nameAr": "هندسة النماذج اللغوية (LLM Engineering)",
+      "descriptionAr": "توظيف النماذج اللغوية في التطبيقات العملية عبر هندسة التلقين، وتقنيات RAG، والضبط الدقيق (Fine-tuning).",
+      "lessonCount": 17,
+      "firstLessonSlug": "01-prompt-engineering",
+      "firstLessonTitleAr": "هندسة التلقين (Prompt Engineering): الأنماط والتقنيات الاحترافية"
+    },
+    {
+      "id": "12",
+      "name": "Multimodal AI",
+      "nameAr": "الذكاء الاصطناعي متعدد الوسائط",
+      "descriptionAr": "النماذج القادرة على معالجة وفهم النصوص والصور والأصوات والفيديو والربط بينها في فضاء مشترك.",
+      "lessonCount": 25,
+      "firstLessonSlug": "01-vision-transformer-patch-tokens",
+      "firstLessonTitleAr": "محولات الرؤية والرموز الجزئية (Patch Tokens)"
+    },
+    {
+      "id": "13",
+      "name": "Tools & Protocols",
+      "nameAr": "الأدوات والبروتوكولات (Tools & Protocols)",
+      "descriptionAr": "بروتوكولات استدعاء الدوال، ونظام MCP، وواجهات ربط نماذج الذكاء الاصطناعي بالبيئة الخارجية.",
+      "lessonCount": 23,
+      "firstLessonSlug": "01-the-tool-interface",
+      "firstLessonTitleAr": "واجهة الأدوات — لماذا يحتاج الوكلاء إلى مدخلات ومخرجات مهيكلة؟"
+    },
+    {
+      "id": "14",
+      "name": "Agent Engineering",
+      "nameAr": "هندسة الوكلاء الأذكياء (Agent Engineering)",
+      "descriptionAr": "بناء الوكلاء الأذكياء القادرين على التخطيط، واستخدام الأدوات، والذاكرة، واتخاذ القرارات الذاتية.",
+      "lessonCount": 42,
+      "firstLessonSlug": "01-the-agent-loop",
+      "firstLessonTitleAr": "حلقة الوكيل الأساسية: الملاحظة، التفكير، والتصرف (ReAct)"
+    },
+    {
+      "id": "15",
+      "name": "Autonomous Systems",
+      "nameAr": "الأنظمة الذاتية المستقلة",
+      "descriptionAr": "بناء وكلاء مستقلين قادرين على تنفيذ مهام برمجية وهندسية معقدة دون الحاجة لتدخل بشري مستمر.",
+      "lessonCount": 22,
+      "firstLessonSlug": "01-long-horizon-agents",
+      "firstLessonTitleAr": "التحول الجوهري من روبوتات الدردشة إلى الوكلاء ذوي الآفاق الزمنية الطويلة"
+    },
+    {
+      "id": "16",
+      "name": "Multi-Agent & Swarms",
+      "nameAr": "الأنظمة متعددة الوكلاء والأسراب",
+      "descriptionAr": "تنسيق العمل الجماعي بين عدة وكلاء أذكياء، وبروتوكولات التواصل، وحل المشكلات المعقدة بالتعاون.",
+      "lessonCount": 25,
+      "firstLessonSlug": "01-why-multi-agent",
+      "firstLessonTitleAr": "لماذا الأنظمة متعددة الوكلاء؟ القوة الكامنة في توزيع المسؤوليات"
+    },
+    {
+      "id": "17",
+      "name": "Infrastructure & Production",
+      "nameAr": "البنية التحتية والإنتاج (MLOps & Infra)",
+      "descriptionAr": "نشر نماذج الذكاء الاصطناعي، وتوسيع النطاق، والمراقبة، وتقليل استهلاك الذاكرة وحسابات الاستدلال.",
+      "lessonCount": 28,
+      "firstLessonSlug": "01-managed-llm-platforms",
+      "firstLessonTitleAr": "منصات النماذج المدارة سحابياً — Bedrock و Vertex AI و Azure OpenAI"
+    },
+    {
+      "id": "18",
+      "name": "Ethics, Safety & Alignment",
+      "nameAr": "الأخلاقيات والأمان والمحاذاة",
+      "descriptionAr": "بناء ذكاء اصطناعي نافع للبشرية وأخلاقي ومحاذٍ للقيم الإنسانية — ضرورة لا خيار.",
+      "lessonCount": 30,
+      "firstLessonSlug": "01-instruction-following-alignment-signal",
+      "firstLessonTitleAr": "اتباع التعليمات الدقيق كإشارة محاذاة أولية للنماذج"
+    },
+    {
+      "id": "19",
+      "name": "Capstone Projects",
+      "nameAr": "المشاريع الختامية الشاملة",
+      "descriptionAr": "تتويج كل ما تعلمته من خلال بناء مشاريع عملاقة وأنظمة متكاملة لمعرض أعمالك.",
+      "lessonCount": 17,
+      "firstLessonSlug": "01-terminal-native-coding-agent",
+      "firstLessonTitleAr": "المشروع الختامي 01 — وكيل برمجة ذاتي أصيل يعمل داخل الطرفية"
+    }
+  ]
+}

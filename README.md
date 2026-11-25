@@ -10,6 +10,25 @@
   <a href="https://aiengineeringfromscratch.com"><img src="https://img.shields.io/badge/web-aiengineeringfromscratch.com-3553ff?style=flat-square&labelColor=fafaf5" alt="Website"></a>
 </p>
 
+## النسخة العربية (VitePress)
+
+يضم هذا المستودع أيضًا موقع توثيق عربيًا تفاعليًا مبنيًا على **VitePress**، يقدّم المنهج نفسه بواجهة RTL، وبحثًا محليًا، وتتبّعًا للتقدم، واختبارات بعد الدروس، وصفحات مراحل قابلة للفهرسة.
+
+```bash
+cd website
+npm install
+npm run docs:dev      # تشغيل محلي
+npm run docs:build    # بناء الموقع الثابت + sitemap
+npm run docs:preview  # معاينة الناتج
+```
+
+- دليل الموقع الكامل: [`website/README.md`](website/README.md)
+- مزامنة المحتوى من `phases/`: `python scripts/sync_content.py`
+- الترخيص: **MIT**
+- المستودع الأصلي: [rohitg00/ai-engineering-from-scratch](https://github.com/rohitg00/ai-engineering-from-scratch)
+
+تفاصيل إضافية عن المنهج الإنجليزي الأصلي أدناه.
+
 ```
 ░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒░░░▒▒▒
 ```
